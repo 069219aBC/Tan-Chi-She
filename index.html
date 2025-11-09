@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇小游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🐍 贪吃蛇小游戏 🐍</h1>
+            <div class="developer-info">开发者 - 王梓明</div>
+        </header>
+        
+        <div class="game-stats">
+            <div class="score-board">
+                <span class="score-label">得分:</span>
+                <span id="score" class="score-value">0</span>
+            </div>
+            <div class="level-board">
+                <span class="level-label">等级:</span>
+                <span id="level" class="level-value">1</span>
+            </div>
+            <div class="high-score-board">
+                <span class="high-score-label">最高分:</span>
+                <span id="high-score" class="high-score-value">0</span>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <h2>游戏结束!</h2>
+                <p>最终得分: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="restart-btn">重新开始</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-info">
+                <h3>游戏控制</h3>
+                <div class="key-buttons">
+                    <div class="key-row">
+                        <kbd>↑</kbd>
+                    </div>
+                    <div class="key-row">
+                        <kbd>←</kbd>
+                        <kbd>↓</kbd>
+                        <kbd>→</kbd>
+                    </div>
+                </div>
+                <p>使用方向键控制蛇的移动方向</p>
+            </div>
+            
+            <div class="game-rules">
+                <h3>游戏规则</h3>
+                <ul>
+                    <li>🐍 控制蛇吃到红色食物</li>
+                    <li>🚫 不要撞到墙壁或自己的身体</li>
+                    <li>⚡ 每吃10个食物升一级</li>
+                    <li>🎯 等级越高，速度越快</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <p>享受游戏乐趣！ 🎮</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
